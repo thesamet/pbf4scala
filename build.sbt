@@ -3,6 +3,8 @@ import com.trueaccord.scalapb.{ScalaPbPlugin => PB}
 PB.protobufSettings
 PB.grpc := false
 
+scalaSource in PB.protobufConfig := sourceManaged.value
+
 coverageExcludedPackages := "org.openstreetmap.osmosis.osmbinary.*"
 
 lazy val root = (project in file(".")).
